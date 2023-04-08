@@ -1,0 +1,19 @@
+javac.source            17
+javac.target            17
+src:                    src/main/java,src/main/resources
+bin:                    target/classes
+testsrc:                src/test/java
+testbin:                target/test-classes
+target-dir:             target
+
+
+central           https://repo.maven.apache.org/maven2
+snapshot          https://oss.sonatype.org/content/repositories/snapshots
+
+-plugin: aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		index               =./ext/central.mvn;\
+		name                = Central;\
+		poll_time           =100000000;\
+		readOnly            =true;\
+		releaseUrl          ='${central}';\
+		snapshotUrl         ='${snapshot}'

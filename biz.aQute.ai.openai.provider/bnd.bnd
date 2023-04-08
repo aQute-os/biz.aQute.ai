@@ -1,0 +1,12 @@
+-buildpath: \
+	biz.aQute.ai.api,\
+	org.osgi.service.component.annotations,\
+	org.osgi.dto,\
+	aQute.libg,\
+	org.apache.felix.gogo.runtime,\
+    org.jruby.jruby;version=latest,\
+	jakarta.json-api,\
+	org.osgi.resource,\
+	org.osgi.framework,\
+	org.osgi.service.log
+

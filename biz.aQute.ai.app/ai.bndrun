@@ -1,0 +1,16 @@
+-include ${user.home}/.bnd/keys.bnd
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole.plugins.ds)',\
+	osgi.identity;filter:='(osgi.identity=biz.aQute.gogo.commands.provider)',\
+	osgi.identity;filter:='(osgi.identity=biz.aQute.shell.sshd.provider)',\
+	osgi.identity;filter:='(osgi.identity=biz.aQute.ai.openai.provider)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.jruby.jruby)'
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
+-runee: JavaSE-17
+-resolve: cache
+-runpath biz.aQute.osgi.logger.forwarder
+-runvm -Dbiz.aQute.gogo.console=true, -DOPENAI_KEY=${OPENAI_KEY}
